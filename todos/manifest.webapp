@@ -1,0 +1,23 @@
+{
+    "name":"Todo App",
+    "description":"Simple todo app",
+    "launch_path":"/index.html",
+    "developer":{
+        "name":"selvan",
+        "url":"https://github.com/selvan"
+    },
+    "permissions":[
+    ],
+    "locales": {
+        "en-US": {
+            "name": "Todo",
+            "description": "Simple Todo App"
+        }
+    },
+    "default_locale":"en-US",
+    "icons": {
+        "120": "/style/icons/todo.png",
+        "60": "/style/icons/60/todo.png"
+    },
+    "orientation":"portrait-primary"
+}

@@ -1,0 +1,25 @@
+{
+    "name":"simple gallery",
+    "description":"simple gallery",
+    "launch_path":"/index.html",
+    "developer":{
+        "name":"selvan",
+        "url":"https://github.com/selvan"
+    },
+    "permissions":[
+        "device-storage:pictures",
+        "settings"
+    ],
+    "locales": {
+        "en-US": {
+            "name": "SGallery",
+            "description": "Simple Gaia Gallery"
+        }
+    },
+    "default_locale":"en-US",
+    "icons": {
+        "120": "/style/icons/Gallery.png",
+        "60": "/style/icons/60/Gallery.png"
+    },
+    "orientation":"portrait-primary"
+}

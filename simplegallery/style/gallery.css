@@ -1,0 +1,82 @@
+* { -moz-box-sizing: border-box; }
+
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #444;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+#thumbnails {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* If we want to scroll up and down, then apparently we have to add */
+    /* some extra width to keep the scrollbar offscreen */
+    width: calc(100% + 10px);
+}
+
+.thumbnail {
+    margin: 0;
+    padding: 0;
+    /* borders only on right and bottom */
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    overflow: hidden;
+    /* default to left-to-right, but overridden for rtl languages below */
+    float: left;
+    /* no list item bullets */
+    list-style-type: none;
+    /* don't let the user select the items */
+    -moz-user-select: none;
+    /* thumbnail images will be displayed with background-image */
+    /* these properties scale and position the images correctly */
+    background-size: cover;        /* allow some cropping */
+    background-position: center;   /* keep the cropping at the edges */
+    background-repeat: no-repeat;
+}
+
+.thumbnail.selected {
+    outline: solid orange 5px;
+    outline-offset: -5px;
+}
+
+/* 320x480 phones */
+@media (orientation: portrait) and (width: 320px) {
+    .thumbnail {
+        width: 107px;
+        height: 107px;
+    }
+}
+
+@media (orientation: landscape) and (width: 480px) {
+    .thumbnail {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* 480x800 phones portrait */
+@media (orientation: portrait) and (width: 480px),
+(orientation: landscape) and (width: 800px) {
+    .thumbnail {
+        width: 160px;
+        height: 160px;
+    }
+}
